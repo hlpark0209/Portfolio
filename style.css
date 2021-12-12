@@ -2,12 +2,13 @@
 :root {
     /* color */
 --color-white : #ffffff;
---color-light-gray : #eee;
---color-dark-gray : #bdbdbd;
+--color-light-white : #eee;
+--color-dark-white : #bdbdbd;
 --color-lightblue : rgb(194, 235, 248);
 --color-lightviolet : mediumpurple: 
 --color-lightpeach:peachpuff;
 --color-lightpink :plum;
+--color-black : #1a1a1a; 
 
 
     /* font size */
@@ -23,7 +24,7 @@
 --weight-regular : 400;
 
     /* size */
-    
+
 
 }
 
@@ -32,4 +33,33 @@
 /* Universal tags */
 *{
     box-sizing: border-box;
+}
+
+/* Typography */
+h1{
+    font-size: var(--font-large);
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    margin: 16px 0px;
+}
+
+h2{
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    color: var(--color-black);
+    margin: 8px 0px;
+}
+
+h3{
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 8px 0px;
+}
+
+p{
+    font-size: var(--font-small);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 4px 0px;
 }
