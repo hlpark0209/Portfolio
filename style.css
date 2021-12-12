@@ -1,0 +1,35 @@
+/* Global variable */
+:root {
+    /* color */
+--color-white : #ffffff;
+--color-light-gray : #eee;
+--color-dark-gray : #bdbdbd;
+--color-lightblue : rgb(194, 235, 248);
+--color-lightviolet : mediumpurple: 
+--color-lightpeach:peachpuff;
+--color-lightpink :plum;
+
+
+    /* font size */
+--font-large : 48px;
+--font-medium : 28px;
+--font-regular : 18px;
+--font-small : 16px;
+--font-micro : 14px;
+
+    /* font weight */
+--weight-bold : 700;
+--weight-semi-bold : 600;
+--weight-regular : 400;
+
+    /* size */
+    
+
+}
+
+
+
+/* Universal tags */
+*{
+    box-sizing: border-box;
+}
