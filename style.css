@@ -7,7 +7,7 @@
 --color-light-white : #eee;
 --color-dark-white : #bdbdbd;
 --color-lightblue : rgb(194, 235, 248);
---color-lightviolet : mediumpurple: 
+--color-lightviolet :rgb(237, 198, 255);
 --color-lightpeach:peachpuff;
 --color-lightpink :plum;
 --color-black : #1a1a1a; 
@@ -18,8 +18,8 @@
     /* font size */
 --font-large : 48px;
 --font-medium : 28px;
---font-regular : 18px;
---font-small : 16px;
+--font-regular : 22px;
+--font-small : 18px;
 --font-micro : 14px;
 
     /* font weight */
@@ -89,6 +89,8 @@ p{
 /* Navbar */
 #navbar{
     display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
     justify-content: space-between;
     align-items: center;
     border: 2px solid red;
@@ -96,30 +98,27 @@ p{
 }
 .navbar__logo{
     width: 80px;
-    margin: 0px 25px;
+    margin: 0px 25px; 
 }
-.navbar__logo a{
-    
-}
+
 .navbar__logo a img{
     width: 100%;
 
 }
 .navbar__menu{
-    font-size: var(--font-regular);
-    font-weight:var(--weight-bold);
     display: flex;
-    justify-content: flex-end;
+    font-size: var(--font-small);
+    font-weight:var(--weight-semi-bold); justify-content: flex-end; 
 }
 .navbar__menu__items{
     margin: 0px 25px;
     vertical-align: middle;
-    /* line-height: 80px; */
+     line-height: 80px;
     cursor: pointer;
 }
 
 .navbar__menu__items.active{
-    background-color: mediumpurple;
+    background-color: var(--color-lightviolet);
 }
 .navbar__menu__items:hover{
     opacity: 0.7;
@@ -151,4 +150,60 @@ p{
     font-weight: var(--weight-bold);
     color: var(--color-white);
     border:2px solid #fff;
+}
+
+
+/* Section common */
+.section{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+}
+.section p{
+    font-size: var(--font-regular);
+    margin: 30px 0px;
+    
+}
+
+/* about */
+#about{
+    border: 2px solid red;
+}
+
+.about__major{
+    display: flex;
+    justify-content: space-between;
+}
+
+.major__icon{
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+    margin: 0 auto;
+    font-size: 90px;
+    color: var(--color-lightviolet);
+    border-radius:50% ;
+    border: 2px solid var(--color-lightviolet);
+}
+.major__title{
+    font-size: var(--font-medium);
+    font-weight: var(--weight-bold);
+    margin-top: 15px;
+}
+.major__description{
+    font-size: var(--font-small);
+    font-weight: var(--weight-semi-bold);
+    margin:15px 0px;
+}
+.about__jobs{
+    border: 2px solid blue
+}
+
+/* skills */
+#skills{
+    background-color: var(--color-lightviolet);
+}
+h3{
+
 }
