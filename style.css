@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap');
+
 /* Global variable */
 :root {
     /* color */
@@ -19,7 +21,7 @@
 --font-micro : 14px;
 
     /* font weight */
---weight-bold : 700;
+--weight-bold : 800;
 --weight-semi-bold : 600;
 --weight-regular : 400;
 
@@ -32,8 +34,21 @@
 
 /* Universal tags */
 *{
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--color-black);
+    cursor: default;
 }
+a{
+    text-decoration: none;
+    color: var(--color-black);
+}
+ul, li {
+    list-style: none;
+}
+
 
 /* Typography */
 h1{
@@ -62,4 +77,45 @@ p{
     font-weight: var(--weight-regular);
     color: var(--color-black);
     margin: 4px 0px;
+}
+
+/* Navbar */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid red;
+
+}
+.navbar__logo{
+    width: 80px;
+    border: 2px solid blue;
+}
+.navbar__logo a{
+    
+}
+.navbar__logo a img{
+    width: 100%;
+    border: 2px solid yellow;
+
+}
+.navbar__menu{
+    font-size: var(--font-regular);
+    font-weight:var(--weight-bold);
+    display: flex;
+    justify-content: flex-end;
+    border: 2px solid red;
+}
+.navbar__menu__items{
+    margin: 0px 25px;
+    vertical-align: middle;
+    /* line-height: 80px; */
+    cursor: pointer;
+    border: 2px solid blue;
+}
+.navbar__menu__items.active{
+    background-color: mediumpurple;
+}
+.navbar__menu__items:hover{
+    opacity: 0.7;
 }
