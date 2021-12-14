@@ -138,6 +138,16 @@ p{
     opacity: 0.7;
 }
 
+.navbar__toggle{
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: var(--font-medium);
+    cursor: pointer;
+    color: var(--color-black);
+    display: none;
+}
+
 
 
 
@@ -367,7 +377,7 @@ h3{
     border-radius: 15px;
     cursor: pointer;
 }
-.project__description:hover{
+.work__projects a:hover .project__description{
     opacity: 0.8;
     border-radius: 15px;
     cursor: pointer;
@@ -388,4 +398,75 @@ h3{
 #contact .contact__rights{
     font-size: var(--font-small);
     margin-top: 10px;
+}
+
+
+/* Responsive */
+@media screen and (max-width:768px) {
+    .navbar__toggle{
+        display: block;
+    }
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar__menu{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .home__title{
+        font-size: var(--font-medium);
+        margin: 23px 16px 16px;
+    }
+    .home__description{
+        font-size: var(--font-small);
+    }
+    .home__contact{
+        font-size: var(--font-micro);
+        padding: 10px 28px;
+    }
+    #about h1{
+        font-size: var(--font-large);
+    }
+    #about p{
+        font-size: var(--font-small);
+    }
+    .about__major{
+        flex-direction: column;
+    }
+    .major__icon{
+        margin-top: 30px;
+    }
+    .skillset{
+        flex-direction: column;
+    }
+    .skillset__right{
+        border-top: 1px solid var(--color-dark-white);;
+    }
+    .work__category__btn{
+        width: 100%;
+        font-size: var(--font-small);
+    }
+    .work__projects{
+        width:100%;
+        height: 100%;
+        flex-direction: column;
+        align-content: center;
+        flex-grow:1;
+    }
+    .work__projects a img:hover .project__description{
+        width:100%;
+        height: 100%;
+    }
+    .work__projects a{
+        width: 100%;
+        margin: 15px 0px;
+    }
+    #contact p{
+        font-size: var(--font-small);
+    }
+    #contact .contact__rights{
+        font-size: var(--font-micro);
+    }
 }
