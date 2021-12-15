@@ -31,8 +31,18 @@ contact.addEventListener('click', () => {
     scrollIntoView('#contact');
 });
 
+
 // Add function
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior: "smooth"});
 }
+
+
+
+// Make home's background to transparent when the windwo scroll down
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
