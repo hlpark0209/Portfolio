@@ -100,6 +100,7 @@ p{
     width: 100%;
     background: var(--color-white);
     transition: all 0.2s ease-in-out;
+    z-index: 9;
 }
 .navbar__wrap{
     max-width: 1200px;
@@ -158,7 +159,7 @@ p{
 /* HOME */
 #home{
     background: url('/imgs/home-background.jpg') center/cover no-repeat;
-    padding: 60px 0px;
+    padding: 150px 0px 65px 0px;
     text-align: center;
 }
 .photo{
@@ -191,7 +192,7 @@ p{
 .section{
    /* max-width: 1200px;*/
     margin: 0 auto;
-    padding: 55px;
+    padding: 95px 50px 70px;
     text-align: center;
 }
 .section p{
