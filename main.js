@@ -53,11 +53,47 @@ document.addEventListener('scroll', () => {
         btn.style.opacity = 0;
         btn2.style.cursor = 'default';
     }
+
+    btn.addEventListener('click', ()=> {
+        scrollIntoView('#home');
+    });
 });
 
-document.addEventListener('click', ()=> {
-    scrollIntoView('#home');
+
+// Filter to contents by category
+const filterBtn = document.querySelector('.work__category');
+const filterCon = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.work__projects a');
+
+filterBtn.addEventListener( 'click', (e) => {
+    const filter = e.target.dataset.filter;
+    if (filter == null){
+        return;
+    }
+    filterCon.classList.add('anim-out');
+    setTimeout(() => {
+        projects.forEach((projects) => {
+            console.log(projects.dataset.type);
+            if(filter === '*' || filter === projects.dataset.type){
+                projects.classList.remove('invisible');
+            } else{
+                projects.classList.add('invisible');
+            }
+        });
+        filterCon.classList.remove('anim-out');
+    }, 300);
 });
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -69,3 +105,4 @@ function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior: "smooth"});
 }
+

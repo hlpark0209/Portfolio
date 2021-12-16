@@ -340,11 +340,20 @@ h3{
     background-color: var(--color-light-white);
     font-weight: var(--weight-semi-bold);
 }
+.work__projects a.invisible{
+    display: none;
+}
 .work__projects{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 35px auto;
+    opacity: 1;
+    transition: all 0.15s ease-in;
+}
+.work__projects.anim-out{
+    opacity: 0;
+    transform: scale(0.98) translateY(3px);
 }
 .project__description{
     display: flex;
