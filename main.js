@@ -11,6 +11,8 @@ document.addEventListener('scroll', () => {
     }
 });
 
+
+
 // Make scroll to section
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (e) => {
@@ -24,6 +26,13 @@ navbarMenu.addEventListener('click', (e) => {
     scrollIntoView(link);
     
 });
+
+// Make a menu toggle 
+const toggle = document.querySelector('.navbar__toggle');
+toggle.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open')
+});
+
 
 // Move to contact section
 const contact = document.querySelector('.home__contact');
@@ -90,16 +99,6 @@ const menuActive = document.querySelector('.work__category__btn.active');
     menuActive.classList.remove('active');
     const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
     target.classList.add('active');
-
-
-
-
-
-
-
-
-
-
 
 
 
