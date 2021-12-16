@@ -32,13 +32,6 @@ contact.addEventListener('click', () => {
 });
 
 
-// Add function
-function scrollIntoView(selector){
-    const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({behavior: "smooth"});
-}
-
-
 
 // Make home's background to transparent when the windwo scroll down
 const home = document.querySelector('.home__container');
@@ -46,3 +39,33 @@ const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeHeight;
 });
+
+
+// Make a button that move to the top
+const btn = document.querySelector('.gotoTop');
+const btn2 = document.querySelector('.fa-chevron-circle-up');
+
+document.addEventListener('scroll', () => {
+    if(window.scrollY > navbarHeight) {
+        btn.style.opacity = 1;
+        btn2.style.cursor = 'pointer';
+    }else{
+        btn.style.opacity = 0;
+        btn2.style.cursor = 'default';
+    }
+});
+
+document.addEventListener('click', ()=> {
+    scrollIntoView('#home');
+});
+
+
+
+
+
+
+// Add function
+function scrollIntoView(selector){
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: "smooth"});
+}
