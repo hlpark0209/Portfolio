@@ -157,17 +157,20 @@ p{
 
 /* HOME */
 #home{
-    background: url('/imgs/home-background.jpg') center/cover no-repeat;
+    background: url('/imgs/home-background.jpg') center/cover no-repeat; 
     padding: 150px 0px 65px 0px;
     text-align: center;
 }
-.photo{
-    margin: 0 auto;
-    background: url('/imgs/hyelee_img.jpg') center/cover no-repeat;
+.home__container__img{
+    width: 100%;
+}
+.home__container__phl{
+    
     width: 250px;
     height: 250px;
     border-radius: 50%;
     border: 2px solid var(--color-white);
+    z-index: 9;
 }
 .home__title, .home__description {
     color: var(--color-white);

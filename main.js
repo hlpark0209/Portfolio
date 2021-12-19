@@ -95,10 +95,10 @@ filterBtn.addEventListener( 'click', (e) => {
 
 
 // Maintain the menu & btn's active
-const menuActive = document.querySelector('.work__category__btn.active');
-    menuActive.classList.remove('active');
-    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
-    target.classList.add('active');
+// const menuActive = document.querySelector('.work__category__btn.active');
+//     menuActive.classList.remove('active');
+//     const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+//     target.classList.add('active');
 
 
 
