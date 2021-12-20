@@ -69,7 +69,6 @@ const options = {
 const callback = (entrise, observer) => {
     entrise.forEach( entry => {
         if(!entry.isIntersecting && entry.intersectionRatio > 0){
-            console.log(entry);
             const index = sectionIds.indexOf(`#${entry.target.id}`);
             
             if (entry.boundingClientRect.y < 0){
