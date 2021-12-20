@@ -53,6 +53,13 @@ function selectNavItem(selected){
     selectedNavItems.classList.add('active');
 }
 
+function scrollIntoView(selector){
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: "smooth"});
+    selectNavItem(navItems[sectionIds.index(selector)]);
+}
+
+
 const options = {
     root : null,
     rootMargin : '0px',
@@ -164,10 +171,6 @@ filterBtn.addEventListener( 'click', (e) => {
 
 
 // Add function
-function scrollIntoView(selector){
-    const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({behavior: "smooth"});
-}
 
 
 
