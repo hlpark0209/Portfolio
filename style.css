@@ -137,6 +137,9 @@ p{
     line-height: 80px;
     cursor: pointer;
 }
+.navbar__menu__items.active{
+    color: var(--color-lightpink);
+}
 
 .navbar__menu__items:hover{
     opacity: 0.7;
@@ -403,17 +406,25 @@ h3{
 
 /* contact */
 #contact{
+    height: 500px;
     background: var(--color-light-white);
 }
 #contact .contact__title{
     margin-bottom: 25px;
 }
 #contact p{
-    margin: 0px;
+    margin: 5px auto;
+    text-align: left;
+    max-width: 338px;
 }
 #contact .contact__rights{
     font-size: var(--font-small);
-    margin-top: 10px;
+    margin-top: 20px;
+}
+#contact .contact__git a{
+    cursor: pointer;
+    color: skyblue;
+    text-decoration: underline;
 }
 
 

@@ -27,6 +27,65 @@ navbarMenu.addEventListener('click', (e) => {
     
 });
 
+
+
+
+// intersectionobserver function
+// 1. 모든 섹션 요소를 가져온다.
+// 2. intersectionobserver로 아이템을 활성화 시킨다.
+// 3. 보여지는 섹션에 해당한느 메뉴를 활성화 시킨다.  
+const sectionIds = [
+    '#home',
+    '#about',
+    '#skills',
+    '#work',
+    '#contact',
+];
+const sections = sectionIds.map(id => document.querySelector(id));
+const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`)
+);
+
+let selectedNavIndex = 0;
+let selectedNavItems = navItems[0];
+function selectNavItem(selected){
+    selectedNavItems.classList.remove('active');
+    selectedNavItems = selected;
+    selectedNavItems.classList.add('active');
+}
+
+const options = {
+    root : null,
+    rootMargin : '0px',
+    threshold : 0.3,
+}
+
+const callback = (entrise, observer) => {
+    entrise.forEach( entry => {
+        if(!entry.isIntersecting && entry.intersectionRatio > 0){
+            console.log(entry);
+            const index = sectionIds.indexOf(`#${entry.target.id}`);
+            
+            if (entry.boundingClientRect.y < 0){
+                selectedNavIndex = index + 1;
+            }else{
+                selectedNavIndex = index - 1;
+            }
+        }
+    });
+}
+const observer = new IntersectionObserver(callback, options);
+sections.forEach(section => observer.observe(section));
+
+window.addEventListener('scroll', () => {
+    selectNavItem(navItems[selectedNavIndex]);
+});
+
+
+
+
+
+
+
 // Make a menu toggle 
 const toggle = document.querySelector('.navbar__toggle');
 toggle.addEventListener('click', () => {
@@ -104,12 +163,11 @@ filterBtn.addEventListener( 'click', (e) => {
 
 
 
-
-
-
 // Add function
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior: "smooth"});
 }
+
+
 
