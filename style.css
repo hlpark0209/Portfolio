@@ -160,9 +160,9 @@ p{
 
 /* HOME */
 #home{
-    background: url('./imgs/home_background.jpg') center/cover no-repeat; 
+    /* background: url('./imgs/home_background.jpg') center/cover no-repeat;  
     padding: 150px 0px 65px 0px;
-    text-align: center;
+    text-align: center;*/
 }
 .home__container__img{
     width: 100%;
